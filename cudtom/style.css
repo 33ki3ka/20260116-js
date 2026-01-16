@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+#loading {
+  background: #0bd;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* ===== 右 ===== */
+.slide-right {
+  transform-origin: right top;
+  animation: slide-x 1s ease forwards;
+}
+
+/* ===== 左 ===== */
+.slide-left {
+  transform-origin: left top;
+  animation: slide-x 1s ease forwards;
+}
+
+/* ===== 上 ===== */
+.slide-top {
+  transform-origin: left top;
+  animation: slide-y 1s ease forwards;
+}
+
+/* ===== 下 ===== */
+.slide-bottom {
+  transform-origin: left bottom;
+  animation: slide-y 1s ease forwards;
+}
+
+/* 横方向 */
+@keyframes slide-x {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+
+/* 縦方向 */
+@keyframes slide-y {
+  from { transform: scaleY(1); }
+  to   { transform: scaleY(0); }
+}
+
+/* 基本スタイル */
+body {
+  padding: 1rem;
+}
+p {
+  max-width: 600px;
+}
